@@ -4,5 +4,9 @@
   },
   "dependencies": {
     "json-server": "^0.17.0"
-  }
+  },
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
 }

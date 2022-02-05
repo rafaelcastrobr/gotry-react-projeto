@@ -1,27 +1,29 @@
-import React from "react";
+import React , { useEffect, useState } from "react";
 import PromotionCard from "components/Promotion/Card/Card";
+import axios from "axios";
 
-const promotion = {
-  "id": 1,
-  "title": "Kit Notebook Acer Aspire 3 + Mochila Green, A315-41-R790, AMD Ryzen 3 2200U Dual Core",
-  "price": 1799,
-  "imageUrl": "https://a-static.mlcdn.com.br/618x463/notebook-i5-8gb-ssd-240gb-tela-full-hd-15-6-brazil-pc/pcinformatica/420680/3c0a2d12df8a3b2214e8c930292edf6f.jpg",
-  "url": "https://www.amazon.com.br/Notebook-Acer-Mochila-A315-41-R790-Mem%C3%B3ria/dp/B07YDWLV7S/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1&tag=gatry0b-20&linkId=e4a1146599e36741a720a6a952cbc328&language=pt_BR",
-  "comments": [
-    {
-      "id": 1,
-      "comment": "TELA HD"
-    }
-  ]
-}
 
 const PagesPromotionSearch = () => {
-  return <div style={{
+  const [promotions, setPromotions] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/promotions?_embed=comments')
+    .then((response) => {
+      setPromotions(response.data);
+    });
+  }, []); 
+
+  
+  return (
+  <div style={{
     maxWidth: 800,
     margin: '30px auto',
   }}>
-   <PromotionCard promotion={promotion}/>
+    {promotions.map((promotion) => (
+      <PromotionCard promotion={promotion} />
+    ))}
   </div>
+  )
 }
 
 export default PagesPromotionSearch;
