@@ -4,25 +4,36 @@
       "id": 1,
       "title": "Kit Notebook Acer Aspire 3 + Mochila Green, A315-41-R790, AMD Ryzen 3 2200U Dual Core",
       "price": 1799,
+      "url": "",
       "imageUrl": "https://m.media-amazon.com/images/I/61o0lt6Sh6L._AC_SY450_.jpg"
     },
     {
       "id": 2,
       "title": "Faqueiro Tramontina Laguna Inox - 100 Peças",
       "price": 246.05,
+      "url": "",
       "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem/0324bf9ad81ccbc5a8e22a1a41015649.png"
     },
     {
       "id": 3,
       "title": "Tênis West Coast Marrom",
       "price": 119.99,
+      "url": "",
       "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem/fe0a1e4ddcbd8f9a99a05908b6d29ea2.png"
     },
     {
       "id": 4,
       "title": "Fone de Ouvido Jaybird Run XT Sport Bluetooth, Cinza",
-      "price": 699.90,
+      "price": 699.9,
+      "url": "",
       "imageUrl": "https://vvtatix.vteximg.com.br/arquivos/ids/394708-500-500/image-8277aea05de64b7897202779872e54f1.jpg"
+    },
+    {
+      "title": "Smartphone Samsung Galaxy S20 FE 128GB Cloud White - 4G 6GB RAM",
+      "url": "https://www.magazineluiza.com.br/smartphone-samsung-galaxy-s20-fe-128gb-cloud-white-4g-6gb-ram-tela-65-cam-tripla-selfie-32mp/p/155630000/te/gs2f/",
+      "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem/f87692fdbf8786723d905b814b1e6144.jpg",
+      "price": "1750",
+      "id": 12
     }
   ],
   "comments": [
