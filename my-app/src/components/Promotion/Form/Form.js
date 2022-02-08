@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import axios from "axios";
+import useApi from "components/utils/useApi";
 import './Form.css';
 
 const initialValue = {
@@ -13,15 +13,28 @@ const initialValue = {
 const PromotionForm = ({ id }) => {
   const [values, setValues] = useState(id ? null : initialValue);
   const history = useNavigate();
+  const [load] = useApi({
+    url: `/promotions/${id}`,
+    onCompleted: (response) => {
+      setValues(response.data);
+    }
+  })
+
+  const [save, saveInfo] = useApi ({
+    url: id ? `/promotions/${id}` : `/promotions`,
+    method: id ? 'put' : 'post',
+    onCompleted: (response) => {
+      if(!response.error) {
+        history('/')
+      }
+    }
+  })
 
   useEffect(() => {
     if (id) {
-      axios.get(`http://localhost:5000/promotions/${id}`)
-        .then((response) => {
-          setValues(response.data);
-        })
+      load();
     }
-  }, [])
+  }, [id])
 
   function onChange(ev) {
     const { name, value } = ev.target;
@@ -31,16 +44,9 @@ const PromotionForm = ({ id }) => {
 
   function onSubmit(ev) {
     ev.preventDefault();
-
-    const method = id ? 'put' : 'post';
-    const url = id
-    ? `http://localhost:5000/promotions/${id}`
-    : 'http://localhost:5000/promotions'
-
-    axios[method](url, values)
-      .then((response) => {
-        history('/')
-      })
+    save({
+      data: values,
+    });
   }
 
   if (!values) {
@@ -55,6 +61,7 @@ const PromotionForm = ({ id }) => {
       <h2>{id? 'Editar': 'Nova Promoção'}</h2>
 
       <form onSubmit={onSubmit}>
+        {saveInfo.loading && <span>Salvando Dados</span>}
         <div className="promotion-form__group">
           <label htmlFor="title">Título</label>
           <input name="title" id="title" type="text" onChange={onChange} value={values.title} />
