@@ -47,12 +47,50 @@
     {
       "id": 1,
       "comment": "TELA HD",
-      "promotionId": 1
+      "promotionId": 1,
+      "userId": 1
     },
     {
       "id": 2,
       "comment": "de R$ 599,90 \n por R$246,05à vista \n (5% de desconto) \n ou R$ 259,00 em 5x de R$ 51,80 sem juros",
-      "promotionId": 2
+      "promotionId": 2,
+      "userId": 2
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "Comprei e devolvi.",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "Mas acho que vou ficar\n",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "promotionId": 4,
+      "comment": "Muito caro\n",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "promotionId": 3,
+      "comment": "Comprei hoje",
+      "id": 6
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Rafael",
+      "avatarUrl": "https://api.uifaces.co/our-content/donated/rSuiu_Hr.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Vinicius",
+      "avatarUrl": "https://api.uifaces.co/our-content/donated/1H_7AxP0.jpg"
     }
   ]
 }

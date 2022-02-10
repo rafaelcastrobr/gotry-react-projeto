@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import PromotionModal from "../Modal/Modal";
 import PromotionCard from "components/Promotion/Card/Card";
-import UIModal from 'components/UI/Modal/Modal';
 import './List.css';
 
 const PromotionsList = ({ loading, error, promotions }) => {
@@ -29,9 +29,13 @@ const PromotionsList = ({ loading, error, promotions }) => {
           onClickComments={() => setPromotionId(promotion.id)}
         />
       ))}
-      <UIModal isOpen={Boolean(promotionId)} onClickClose={()=> setPromotionId(null)}>
-        <h1>Comentários</h1>
-      </UIModal>
+      {promotionId && (
+        <PromotionModal
+          promotionId={promotionId}
+          onClickClose={() => setPromotionId(null)}
+        />
+      )}
+
     </div>
 
   )
