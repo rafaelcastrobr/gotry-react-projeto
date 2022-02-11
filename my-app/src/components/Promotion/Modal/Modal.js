@@ -29,29 +29,47 @@ const PromotionModal = ({ promotionId, onClickClose }) => {
     ev.preventDefault();
     try {
       await sendComment({
+        data: {
+          userId: 1,
+          promotionId,
+          comment
+        }
+      })
+      setComment('')
+      load({ quietly: true });
+    } catch (e) {
+
+    }
+  }
+
+  async function sendAnswer(text, parentId) {
+    await sendComment({
       data: {
         userId: 1,
         promotionId,
-        comment
+        comment: text,
+        parentId
       }
     })
-    setComment('')
-    load();
-    } catch(e) {
-
-    }
-    
+    load({ quietly: true });
   }
 
   return (
     <UIModal isOpen onClickClose={onClickClose}>
       <form className="promotion-modal__comment-form" onSubmit={onSubmit}>
-        <textarea  placeholder="comentário..." onChange={(ev) => setComment(ev.target.value)} value={comment}/>
-        <button type="submit" disabled={sendComment.loading}>
-          {sendComment.loading? 'Enviando': "Enviar"}
-          </button>
+        <textarea
+          placeholder="comentário..."
+          onChange={(ev) => setComment(ev.target.value)}
+          value={comment}
+          disabled={sendCommentInfo.loading}
+        />
+        <button
+          type="submit"
+          disabled={sendComment.loading}>
+          {sendComment.loading ? 'Enviando' : "Enviar"}
+        </button>
       </form>
-      <PromotionModalCommentsTree comments={loadInfo.data} />
+      <PromotionModalCommentsTree comments={loadInfo.data} sendComment={sendAnswer} />
     </UIModal>
   )
 

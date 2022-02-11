@@ -79,6 +79,58 @@
       "promotionId": 3,
       "comment": "Comprei hoje",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "Mas desisti",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "promotionId": 3,
+      "comment": "Não compre",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "Vou querer",
+      "parentId": 2,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "promotionId": 3,
+      "comment": "Que isso",
+      "parentId": 8,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "promotionId": 4,
+      "comment": "Sim",
+      "parentId": 5,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "promotionId": 3,
+      "comment": "Comprei kk",
+      "parentId": 8,
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "promotionId": 13,
+      "comment": "Comprei hoje",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "promotionId": 13,
+      "comment": "Mas deu certo?",
+      "id": 14
     }
   ],
   "users": [
