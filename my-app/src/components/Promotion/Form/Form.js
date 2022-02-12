@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import UIButton from 'components/UI/Button/Button';
 import useApi from 'components/utils/useApi';
 import Field from 'components/Form/Field/Field';
 import { Formik, Form } from 'formik';
@@ -72,7 +73,7 @@ const PromotionForm = ({ id }) => {
                 <Field name="price" type="number" label="Preço" />
               </div>
               <div>
-                <button type="submit">Salvar</button>
+                <UIButton component="button" type="submit">Salvar</UIButton>
               </div>
             </Form>
           )}
