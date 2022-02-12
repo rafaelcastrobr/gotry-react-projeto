@@ -8,11 +8,7 @@
       "imageUrl": "https://m.media-amazon.com/images/I/61o0lt6Sh6L._AC_SY450_.jpg"
     },
     {
-      "id": 2,
-      "title": "Faqueiro Tramontina Laguna Inox - 100 Peças",
-      "price": 246.05,
-      "url": "",
-      "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem/0324bf9ad81ccbc5a8e22a1a41015649.png"
+      "id": 2
     },
     {
       "id": 3,
@@ -36,7 +32,7 @@
       "id": 12
     },
     {
-      "title": "Molho Tabasco Chipotle Smoked Teste 4",
+      "title": "Molho Tabasco Chipotle Smoked Apimentado 1+",
       "url": "https://amzn.to/3rq4HHb",
       "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem/d92f229538424d4474bc2d6b7ea7b9df.jpg",
       "price": "13",
