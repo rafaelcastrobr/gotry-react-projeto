@@ -2,7 +2,7 @@
 
 # Gotry
 
-### Sobre
+### ✨ Sobre
 Projeto realizado junto ao @viniciusdacal espelho do site Gatry.
 Iniciando o aprendizado sobre React.
 
@@ -11,13 +11,13 @@ Iniciando o aprendizado sobre React.
 <img src="my-app/public/img/captura1.png" width="500">  <img src="my-app/public/img/captura2.png" width="500">
 
 
-### Ferramentas
+### 🔨 Ferramentas
 - Html
 - CSS
 - NodeJs
 - React {JSX}
 
-### Iniciando
+### 🔥 Iniciando
 
 clone
 
